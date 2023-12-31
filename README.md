@@ -1,4 +1,4 @@
-# The Linux Basics Course
+# Embark on your Linux mastery journey, one command at a time 🌟
 
 You may access the slide deck for the entire course on the following [Link](https://1drv.ms/p/s!AqdnZ8mGH4oRirw5_mYzcl-gdyCf6Q?e=7PWWaF)
 
