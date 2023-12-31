@@ -22,9 +22,7 @@ You may access the slide deck for the entire course on the following [Link](http
   - [05-Run-Levels](docs/03-Linux-Core-Concepts/06-Run-Levels.md)
   - [06-File-Types](docs/03-Linux-Core-Concepts/07-File-Types.md)
   - [07-Filesystem-Hierarchy](docs/03-Linux-Core-Concepts/08-Filesystem-Hierarchy.md)
-  - [08-Lab-Linux-RunLevels-Filesystem-Hierarchy](docs/03-Linux-Core-Concepts/09-Lab-Linux-RunLevels-Filesystem-Hierarchy.md)
-
-
+  
 - [03-Package-Mangement](docs/04-Package-Mangement)
 
   - [01-Package-Management-Distribution](docs/04-Package-Mangement/01-Package-Management-Distribution.md)
@@ -40,9 +38,7 @@ You may access the slide deck for the entire course on the following [Link](http
   - [01-File-Compression-and-Archival](docs/05-Working-With-Shell-Part-II/02-File-Compression-and-Archival.md)
   - [02-Searching-For-Files-and-Patterns](docs/05-Working-With-Shell-Part-II/03-Searching-for-files-and-patterns.md)
   - [03-IO-Redirection](docs/05-Working-With-Shell-Part-II/04-IO-Redirection.md)
-  - [04-Lab-Working-With-Shell-Part-II](docs/05-Working-With-Shell-Part-II/05-Lab-Working-With-Shell-Part-II.md)
-  - [05-Vi-Editor](docs/05-Working-With-Shell-Part-II/06-Vi-Editor.md)
-  - [06-Lab-VI-Editor](docs/05-Working-With-Shell-Part-II/07-Lab-VI-Editor.md)
+  - [04-Vi-Editor](docs/05-Working-With-Shell-Part-II/06-Vi-Editor.md)
 
 - [05-Security-and-File-Permissions](docs/06-Security-and-File-Permissions)
 
@@ -66,7 +62,6 @@ You may access the slide deck for the entire course on the following [Link](http
   - [02-File-System-in-Linux](docs/08-Storage-in-Linux/03-File-System-in-Linux.md)
   - [03-DAS-NAS-and-SAN](docs/08-Storage-in-Linux/04-DAS-NAS-and-SAN.md)
   - [04-LVM](docs/08-Storage-in-Linux/05-LVM.md)
-  - [05-Project-Status-Meeting](docs/08-Storage-in-Linux/06-Project-Status-Meeting.md)
 
 - [08-Service-management-with-SYSTEMD](docs/09-Service-management-with-SYSTEMD)
 
