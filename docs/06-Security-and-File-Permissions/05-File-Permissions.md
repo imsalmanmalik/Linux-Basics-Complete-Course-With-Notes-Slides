@@ -14,7 +14,7 @@
   - To list the directory permission use
 
     ```
-    [~]$ ls -ld /home/salman/random_dir
+    [~]$ ls -ld /home/bob/random_dir
     ```
 
   - To know the current user 
@@ -26,7 +26,7 @@
   - To change the change the directory
 
     ```
-    [~]$ cd /home/salman/random_dir
+    [~]$ cd /home/bob/random_dir
     ```
 
   #### File Permissions
@@ -89,16 +89,16 @@
 
   #### Change Ownership 
    
-  - Changes owner to salman and group to developer
+  - Changes owner to bob and group to developer
    
     ```
-    [~]$ chown salman:developer test-file
+    [~]$ chown bob:developer test-file
     ```
     
-  - Changes just the owner of the file to salman. Group unchanged.
+  - Changes just the owner of the file to bob. Group unchanged.
 
     ```
-    [~]$ chown salman andoid.apk
+    [~]$ chown bob andoid.apk
     ```
 
   - Change the group for the test-file to the group called android. 

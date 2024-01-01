@@ -31,17 +31,17 @@
   - Public and Private key are stored at below location.
     
     ```
-    Public Key: /home/salman/.ssh/id_rsa.pub
+    Public Key: /home/bob/.ssh/id_rsa.pub
     ```
 
     ```
-    Private Key: /home/salman/.ssh/id_rsa
+    Private Key: /home/bob/.ssh/id_rsa
     ```
 
   - To generate a keypair on the **`Client`** run this command
 
     ```
-    salman@server1 ~]$ ssh-keygen –t rsa
+    bob@caleston-lp10 ~]$ ssh-keygen –t rsa
     ```
 
     ![key](../../images//key.PNG)
@@ -49,16 +49,16 @@
   - To copy the Public key from the client to the remote server
 
     ```
-    salman@server1 ~]$ ssh-copy-id salman@server2
+    bob@caleston-lp10 ~]$ ssh-copy-id bob@devapp01
     ```
 
     ![copy](../../images//copy.PNG)
 
  
-  - Now **`salman`** can login to remote server without password
+  - Now **`bob`** can login to remote server without password
 
     ```
-    [salman@server1 ~]$ ssh server2
+    [bob@caleston-lp10 ~]$ ssh devapp01
     ```
 
     ![pless](../../images//pless.PNG)
@@ -66,7 +66,7 @@
   - Public Key is copied to the remote server at :
 
     ```
-    [salman@server1 ~]$ cat /home/salman/.ssh/authorized_keys
+    [bob@caleston-lp10 ~]$ cat /home/bob/.ssh/authorized_keys
     ```
    
     ![auth](../../images//auth.PNG)
@@ -76,13 +76,13 @@
    - To copy a compresses file to a remote server
 
      ```
-     salman@server1 ~]$ scp /home/salman/salman-code.tar.gz server2:/home/salman
+     bob@caleston-lp10 ~]$ scp /home/bob/bob-code.tar.gz devapp01:/home/bob
      ```
  
    - To copy a directory to a remote server
 
      ```
-     [salman@server1 ~]$ scp –pr /home/salman/media/ server2:/home/salman
+     [bob@caleston-lp10 ~]$ scp –pr /home/bob/media/ devapp01:/home/bob
      ```
      
      ![scp](../../images//scp.PNG)

@@ -1,7 +1,7 @@
 # TROUBLESHOOTING 
 
-  - In this lecture we will be going to troubleshooting the issue that **`salman`** is facing.
-  - salman is not able to reach to the repository server and he get the error as show below.
+  - In this lecture we will be going to troubleshooting the issue that **`bob`** is facing.
+  - bob is not able to reach to the repository server and he get the error as show below.
 
     ![site](../../images/site.PNG)
 
@@ -23,20 +23,20 @@
   - Check if we can resolve the hostname to IP address via **`nslookup`**
 
     ```
-    [~]$ nslookup salman-repo-01
+    [~]$ nslookup bob-repo-01
     Server:      192.168.1.100
     Address:     192.168.1.100 #53
 
     Non-authoritative answer:
-    Name: salman-repo-01
+    Name: bob-repo-01
     Address: 192.168.2.5
     ```
 
   - **`ping`** to check the connectivity.
 
     ```
-    [~]$ ping salman-repo-01
-    PING salman-repo-01 (192.168.2.5) 56(84) bytes of data.
+    [~]$ ping bob-repo-01
+    PING bob-repo-01 (192.168.2.5) 56(84) bytes of data.
 
     --- localhost ping statistics ---
     3 packets transmitted, 0 received, 100% packet loss, time 2034ms
@@ -57,7 +57,7 @@
   - To check the port status use **`netstat`** command and to use it along with port number use below command.
 
     ```
-    [salman-repo-01: ~]$ netstat -an | grep 80 | grep -i LISTEN
+    [bob-repo-01: ~]$ netstat -an | grep 80 | grep -i LISTEN
     ```
 
     ![net](../../images/net.PNG)
@@ -65,7 +65,7 @@
   - To bring up the interface up use below command.
 
     ```
-    [salman-repo-01: ~]$ ip link set dev enp1s0f1 up
+    [bob-repo-01: ~]$ ip link set dev enp1s0f1 up
     ```
 
     ![iplink](../../images/iplink.PNG)

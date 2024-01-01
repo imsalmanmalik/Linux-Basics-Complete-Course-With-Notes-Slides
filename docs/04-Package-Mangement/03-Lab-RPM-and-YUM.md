@@ -10,9 +10,9 @@ Use an **`rpm`** command and find out the exact package name for **`wget`** inst
 $ rpm -qa |grep wget
 ```
 
-To install a package for **`firefox`** browser that has been downloaded under **`/home/salman`** in the system. Caution: It might fail due to failed dependencies
+To install a package for **`firefox`** browser that has been downloaded under **`/home/bob`** in the system. Caution: It might fail due to failed dependencies
 ```
-$ sudo rpm -ivh /home/salman/firefox-68.6.0-1.el7.centos.x86_64.rpm
+$ sudo rpm -ivh /home/bob/firefox-68.6.0-1.el7.centos.x86_64.rpm
 ```
 
 To install a package for **`firefox`** browser along with its dependencies

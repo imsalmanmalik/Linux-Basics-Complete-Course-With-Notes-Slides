@@ -23,8 +23,8 @@
   - Use **`vgcreate`** command to create a Volume Group.
 
     ```
-    [~]$ vgcreate salman_vg /dev/sdb
-    Volume group "salman_vg" successfully created
+    [~]$ vgcreate bob_vg /dev/sdb
+    Volume group "bob_vg" successfully created
     ```
 
   - Use **`pvdisplay`** command to list all the PVs their names, size and the Volume group it is part of.
@@ -33,7 +33,7 @@
     [~]$ pvdisplay
     --- Physical volume ---
       PV Name /dev/sdb
-      VG Name salman_vg
+      VG Name bob_vg
       PV Size 20.00 GiB / not usable 3.00 MiB
       Allocatable yes
       PE Size 4.00 MiB
@@ -48,7 +48,7 @@
     ```
     [~]$ vgdisplay
     --- Volume group ---
-      VG Name salman_vg
+      VG Name bob_vg
       System ID
       Format lvm2
       Metadata Areas 1
@@ -72,7 +72,7 @@
   - To create the Logical Volumes, you can use **`lvcreate`** command
 
     ```
-    [~]$ lvcreate –L 1G –n vol1 salman_vg
+    [~]$ lvcreate –L 1G –n vol1 bob_vg
     Logical volume "vol1" created.
     ```
 
@@ -81,9 +81,9 @@
     ```
     [~]$ lvdisplay
     --- Logical volume ---
-      LV Path /dev/salman_vg/vol1
+      LV Path /dev/bob_vg/vol1
       LV Name vol1
-      VG Name salman_vg
+      VG Name bob_vg
       LV UUID LueYC3-VWpE31-UaYk-wjIR-FjAOyL
       LV Write Access read/write
       LV Creation host, time master, 2020-03-31 06:26:14
@@ -103,19 +103,19 @@
     ```
     [~]$ lvs
      LV VG Attr LSize Pool
-     vol1 salman_vg -wi-a----- 1.00g
+     vol1 bob_vg -wi-a----- 1.00g
     ```
  
   - Now to create an filesystem you can use **`mkfs`** command
 
     ```
-    [~]$ mkfs.ext4 /dev/salman_vg/vol1
+    [~]$ mkfs.ext4 /dev/bob_vg/vol1
     ```
 
   - To mount the filesystem use **`mount`** command
 
     ```
-    [~]$ mount –t ext4 /dev/salman_vg/vol1 /mnt/vol1
+    [~]$ mount –t ext4 /dev/bob_vg/vol1 /mnt/vol1
     ```
 
   - Now logical volume is now available for use. Lets resize the filesystem on vol1 while it is mounted. Check the free space available.
@@ -123,29 +123,29 @@
     ```
     [~]$ vgs
     VG #PV #LV #SN Attr VSize VFree
-    salman_vg 1 1 0 wz--n- 20.00g 19.00g
+    bob_vg 1 1 0 wz--n- 20.00g 19.00g
     ```
 
     ```
-    [~]$ lvresize -L +1G -n /dev/salman_vg/vol1
+    [~]$ lvresize -L +1G -n /dev/bob_vg/vol1
     Logical volume vol1 successfully resized.
     ```
 
     ```
     [~]$ df –hP /mnt/vol1
     Filesystem Size Used Avail Use% Mounted on
-    /dev/mapper/salman_vg-vol1 976M 1.3M 908M 1% /mnt/vol1
+    /dev/mapper/bob_vg-vol1 976M 1.3M 908M 1% /mnt/vol1
     ```
 
   - Now to resize the file system use **`resize2fs`** command.
 
     ```
-    [~]$ resize2fs /dev/salman_vg/vol1
+    [~]$ resize2fs /dev/bob_vg/vol1
     resize2fs 1.42.13 (17-May-2015)
-    Filesystem at /dev/mapper/salman_vg-vol1 is mounted on
+    Filesystem at /dev/mapper/bob_vg-vol1 is mounted on
     /mnt/vol1; on-line resizing required
     old_desc_blocks = 1, new_desc_blocks = 1
-    The filesystem on //dev/mapper/salman_vg-vol1 is now 524288
+    The filesystem on //dev/mapper/bob_vg-vol1 is now 524288
     (4k) blocks long.
     ```
 
@@ -154,7 +154,7 @@
      ```
      [~]$ df –hP /mnt/vol1
      Filesystem Size Used Avail Use% Mounted on
-     /dev/mapper/salman_vg-vol1 2.0G 1.6M 1.9G 1% /mnt/vol1
+     /dev/mapper/bob_vg-vol1 2.0G 1.6M 1.9G 1% /mnt/vol1
      ```
 
      ![LVM2](../../images/lvm2.PNG)

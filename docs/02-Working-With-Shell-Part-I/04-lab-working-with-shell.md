@@ -1,8 +1,8 @@
 # Lab - Working with shell
 
-1. To check the home directory for a particular user say **`salman`**
+1. To check the home directory for a particular user say **`bob`**
    ```
-   $ grep salman /etc/passwd | cut -d ":" -f6
+   $ grep bob /etc/passwd | cut -d ":" -f6
    ```
 1. To check the home directory for a particular user using built in shell variables
    ```
@@ -20,30 +20,30 @@
    ```
 1. To create a directory
    ```
-   $ mkdir /home/salman/birds
+   $ mkdir /home/bob/birds
    ```
 1. To create directories recursively
    ```
-   $  mkdir -p /home/salman/fish/salmon
+   $  mkdir -p /home/bob/fish/salmon
    ```
 1. Create few more directories
    ```
-   $ mkdir -p /home/salman/mammals/elephant
-   $ mkdir -p /home/salman/mammals/monkey
-   $ mkdir /home/salman/birds/eagle
-   $ mkdir -p /home/salman/reptile/snake
-   $ mkdir -p /home/salman/reptile/frog
-   $ mkdir -p /home/salman/amphibian/salamander
+   $ mkdir -p /home/bob/mammals/elephant
+   $ mkdir -p /home/bob/mammals/monkey
+   $ mkdir /home/bob/birds/eagle
+   $ mkdir -p /home/bob/reptile/snake
+   $ mkdir -p /home/bob/reptile/frog
+   $ mkdir -p /home/bob/amphibian/salamander
    ```
 1. To move a directory
    ```
-   $ mv /home/salman/reptile/frog /home/salman/amphibian
+   $ mv /home/bob/reptile/frog /home/bob/amphibian
    ```
 1. To rename a directory
    ```
-   $ mv /home/salman/reptile/snake /home/salman/reptile/crocodile
+   $ mv /home/bob/reptile/snake /home/bob/reptile/crocodile
    ```
 1. To delete a directory
    ```
-   $ rm -r /home/salman/reptile
+   $ rm -r /home/bob/reptile
    ```

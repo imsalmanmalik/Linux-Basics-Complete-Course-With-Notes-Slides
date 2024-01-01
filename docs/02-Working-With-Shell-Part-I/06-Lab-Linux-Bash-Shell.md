@@ -4,9 +4,9 @@
    ```
    $ echo $SHELL
    ```
-2. To change the shell for salman from **`Bash`** to **`Bourne Shell`**
+2. To change the shell for bob from **`Bash`** to **`Bourne Shell`**
    ```
-   $ chsh -s /bin/sh salman
+   $ chsh -s /bin/sh bob
    ```
 3. What is the value of the environment variable **`TERM`**
    ```
@@ -18,7 +18,7 @@
    ```
 5. Which of the following directories is not part of the PATH variable?
    ```
-   /opt/salman-code
+   /opt/bob-code
    ```
 6. Set an alias called **`up`** for the command **`uptime`** and make it persistent by adding to **`~/.profile`** file.
    ```

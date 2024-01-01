@@ -16,13 +16,13 @@
 - For **installing** IPtables in **Ubuntu** servers, 
 
 ```
-salman@server2:~$sudo apt install iptables
+bob@devapp01:~$sudo apt install iptables
 ```
 
 - To **list** the iptables rules,
 
 ```
-salman@server2:~$sudo iptables -L
+bob@devapp01:~$sudo iptables -L
 
 Chain INPUT (policy ACCEPT)
 target     prot opt source               destination
@@ -54,11 +54,11 @@ The --sport or --source-port refers to source port.
 - To list the **iptables rules**,
 
 ```
-salman@server2:~$ sudo iptables -L
+bob@devapp01:~$ sudo iptables -L
 Chain INPUT (policy ACCEPT)
 target     prot opt source               destination
-ACCEPT     tcp  --  server1        anywhere             tcp dpt:ssh
-ACCEPT     tcp  --  server1        anywhere             tcp dpt:http
+ACCEPT     tcp  --  caleston-lp10        anywhere             tcp dpt:ssh
+ACCEPT     tcp  --  caleston-lp10        anywhere             tcp dpt:http
 
 Chain FORWARD (policy ACCEPT)
 target     prot opt source               destination
@@ -70,16 +70,16 @@ target     prot opt source               destination
 - To drop **incoming connections** from any **source** on any **destination port** for any **protocol**
 
 ```
-salman@server2:~$sudo iptables -A INPUT -j DROP
+bob@devapp01:~$sudo iptables -A INPUT -j DROP
 ```
 
 ```
-salman@server2:~$ sudo iptables -L
+bob@devapp01:~$ sudo iptables -L
 Chain INPUT (policy ACCEPT)
 target     prot opt source               destination
-ACCEPT     tcp  --  server1        anywhere             tcp dpt:ssh
-ACCEPT     tcp  --  server1        anywhere             tcp dpt:ssh
-ACCEPT     tcp  --  server1        anywhere             tcp dpt:http
+ACCEPT     tcp  --  caleston-lp10        anywhere             tcp dpt:ssh
+ACCEPT     tcp  --  caleston-lp10        anywhere             tcp dpt:ssh
+ACCEPT     tcp  --  caleston-lp10        anywhere             tcp dpt:http
 DROP       all  --  anywhere             anywhere
 
 Chain FORWARD (policy ACCEPT)
@@ -101,17 +101,17 @@ But, the REJECT command sends an error message back to the source indicating a c
 - To block outgoing traffic to any destination on **port 80**
 
 ```
-salman@server2:~$sudo iptables -A OUTPUT -p tcp --dport 80 -j DROP
+bob@devapp01:~$sudo iptables -A OUTPUT -p tcp --dport 80 -j DROP
 ```
 This will add rule in the **OUTPUT** chain
 
 ```
-salman@server2:~$ sudo iptables -L
+bob@devapp01:~$ sudo iptables -L
 Chain INPUT (policy ACCEPT)
 target     prot opt source               destination
-ACCEPT     tcp  --  server1        anywhere             tcp dpt:ssh
-ACCEPT     tcp  --  server1        anywhere             tcp dpt:ssh
-ACCEPT     tcp  --  server1        anywhere             tcp dpt:http
+ACCEPT     tcp  --  caleston-lp10        anywhere             tcp dpt:ssh
+ACCEPT     tcp  --  caleston-lp10        anywhere             tcp dpt:ssh
+ACCEPT     tcp  --  caleston-lp10        anywhere             tcp dpt:http
 DROP       all  --  anywhere             anywhere
 
 Chain FORWARD (policy ACCEPT)
@@ -124,7 +124,7 @@ DROP       tcp  --  anywhere             anywhere             tcp dpt:http
 
 - To allow https connection from the server to **`google.com`**
 ```
-salman@server2:~$ sudo iptables -I OUTPUT -p tcp -d google.com --dport 443 -j ACCEPT
+bob@devapp01:~$ sudo iptables -I OUTPUT -p tcp -d google.com --dport 443 -j ACCEPT
 ```
 
 - **Unblock IP Address** or to **delete** a rule in IPtables Firewall
@@ -132,11 +132,11 @@ salman@server2:~$ sudo iptables -I OUTPUT -p tcp -d google.com --dport 443 -j AC
 - First find the **line-number** of the rule using the command below
 
 ```
-salman@server2:~$ sudo iptables -L --line-numbers
+bob@devapp01:~$ sudo iptables -L --line-numbers
 Chain INPUT (policy ACCEPT)
 num  target     prot opt source               destination
-1    ACCEPT     tcp  --  server1        anywhere             tcp dpt:ssh
-2    ACCEPT     tcp  --  server1        anywhere             tcp dpt:ssh
+1    ACCEPT     tcp  --  caleston-lp10        anywhere             tcp dpt:ssh
+2    ACCEPT     tcp  --  caleston-lp10        anywhere             tcp dpt:ssh
 3    DROP       all  --  anywhere             anywhere
 
 Chain FORWARD (policy ACCEPT)
@@ -146,7 +146,7 @@ Chain OUTPUT (policy ACCEPT)
 num  target     prot opt source               destination
 1    ACCEPT     tcp  --  anywhere             google.com           tcp dpt:https
 2    ACCEPT     tcp  --  anywhere             devdb01              tcp dpt:postgresql
-3    ACCEPT     tcp  --  anywhere             salman-repo-01     tcp dpt:http
+3    ACCEPT     tcp  --  anywhere             bob-repo-01     tcp dpt:http
 4    DROP       tcp  --  anywhere             anywhere             tcp dpt:http
 5    DROP       tcp  --  anywhere             anywhere             tcp dpt:https
 ```
@@ -159,11 +159,11 @@ sudo iptables -D INPUT 3
 - To display the **line number** for the rules,
 
 ```
-salman@server2:~$ sudo iptables -L --line-numbers
+bob@devapp01:~$ sudo iptables -L --line-numbers
 Chain INPUT (policy ACCEPT)
 num  target     prot opt source               destination
-1    ACCEPT     tcp  --  server1        anywhere             tcp dpt:ssh
-2    ACCEPT     tcp  --  server1        anywhere             tcp dpt:ssh
+1    ACCEPT     tcp  --  caleston-lp10        anywhere             tcp dpt:ssh
+2    ACCEPT     tcp  --  caleston-lp10        anywhere             tcp dpt:ssh
 
 Chain FORWARD (policy ACCEPT)
 num  target     prot opt source               destination
@@ -172,7 +172,7 @@ Chain OUTPUT (policy ACCEPT)
 num  target     prot opt source               destination
 1    ACCEPT     tcp  --  anywhere             google.com           tcp dpt:https
 2    ACCEPT     tcp  --  anywhere             devdb01              tcp dpt:postgresql
-3    ACCEPT     tcp  --  anywhere             salman-repo-01     tcp dpt:http
+3    ACCEPT     tcp  --  anywhere             bob-repo-01     tcp dpt:http
 4    DROP       tcp  --  anywhere             anywhere             tcp dpt:http
 5    DROP       tcp  --  anywhere             anywhere             tcp dpt:https
 ```

@@ -20,7 +20,7 @@ In this lecture we will learn how to create a SYSTEMD Service.
     [~]$ cat /etc/systemd/system/project-mercury.service
     [Unit]
     Description=Python Django for Project Mercury
-    Documentation=http://wiki.salman-dev.ca/mercury
+    Documentation=http://wiki.bob-dev.ca/mercury
     After=postgresql.service
     ```
 

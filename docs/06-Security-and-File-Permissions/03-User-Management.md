@@ -4,17 +4,17 @@
 
   #### User Add
 
-  - To create a new local user **`salman`** in the system use **`useradd`** command.
+  - To create a new local user **`bob`** in the system use **`useradd`** command.
 
     ```
-    [~]$ useradd salman
+    [~]$ useradd bob
     ```
 
-  - To get more details about **`salman`** account like, home director, uid, and shell use **`/etc/passwd`**
+  - To get more details about **`bob`** account like, home director, uid, and shell use **`/etc/passwd`**
 
     ```
-    [~]$ grep -i salman /etc/passwd
-    salman:x:1002:1002::/home/salman:/bin/sh
+    [~]$ grep -i bob /etc/passwd
+    bob:x:1002:1002::/home/bob:/bin/sh
     ```
 
     ![useradd](../../images//useradd.PNG)
@@ -23,21 +23,21 @@
 
     ```
     [~]$ whoami
-    salman
+    bob
     ```
 
   - All user's password are store under **`/etc/shadow`**
 
     ```
-    [~]$ grep -i salman /etc/shadow
-    salman:!:18341:0:99999:7:::
+    [~]$ grep -i bob /etc/shadow
+    bob:!:18341:0:99999:7:::
     ```
  
   - To change the password of current user use **`passwd`** or for any specific user use **`passwd <username>`** 
 
     ```
-    [~]$ passwd salman
-    Changing password for user salman.
+    [~]$ passwd bob
+    Changing password for user bob.
     New UNIX password:
     Retype new UNIX password:
     passwd: all authentication tokens updated
@@ -49,7 +49,7 @@
   - **`useradd`** command be used along with many attributes as show below.
 
     ```
-    [~]$ useradd -u 1009 -g 1009 -d /home/robert -s /bin/bash -c ”Mercury Project member" salman
+    [~]$ useradd -u 1009 -g 1009 -d /home/robert -s /bin/bash -c ”Mercury Project member" bob
     ```
 
     ![manage](../../images//manage.PNG)
@@ -57,7 +57,7 @@
   - To delete a user use **`userdel`** command
 
     ```
-    [~]$ userdel salman
+    [~]$ userdel bob
     ```
 
   - To add a group use **`groupadd`** command 

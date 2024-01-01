@@ -6,11 +6,11 @@
 
   ### Control files
 
-  - To get more details about one's account for example **`salman`** account, home director, uid, and shell check **`/etc/passwd`** 
+  - To get more details about one's account for example **`bob`** account, home director, uid, and shell check **`/etc/passwd`** 
 
     ```
-    [~]$ grep -i ^salman /etc/passwd
-    salman:x:1002:1002::/home/salman:/bin/sh
+    [~]$ grep -i ^bob /etc/passwd
+    bob:x:1002:1002::/home/bob:/bin/sh
     USERNAME:PASSWORD:UID:GID:GECOS:HOMEDIR:SHELL
     ```
    
@@ -19,8 +19,8 @@
   - Password are stored under **`/etc/shadow`**
 
     ```
-    [~]$ grep -i ^salman /etc/shadow
-    salman:$6$0h0utOtO$5JcuRxR7y72LLQk4Kdog7u09LsNFS0yZPkIC8pV9tgD0wXCHutY
+    [~]$ grep -i ^bob /etc/shadow
+    bob:$6$0h0utOtO$5JcuRxR7y72LLQk4Kdog7u09LsNFS0yZPkIC8pV9tgD0wXCHutY
     cWF/7.eJ3TfGfG0lj4JF63PyuPwKC18tJS.:18188:0:99999:7:::
 
     USERNAME:PASSWORD:LASTCHANGE:MINAGE:MAXAGE:WARN:INACTIVE:EXPDATE
@@ -28,10 +28,10 @@
 
     ![shadow](../../images//shadow.PNG)
 
-  - Check the groups **`salman`** belongs too
+  - Check the groups **`bob`** belongs too
 
     ```
-    [~]$ grep -i ^salman /etc/group
+    [~]$ grep -i ^bob /etc/group
     NAME:PASSWORD:GID:MEMBERS
     ```
 

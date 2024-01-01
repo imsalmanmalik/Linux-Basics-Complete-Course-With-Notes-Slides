@@ -43,7 +43,7 @@
 
     ```
     [~]$ who
-    salman pts/2 Apr 28 06:48 (172.16.238.187)
+    bob pts/2 Apr 28 06:48 (172.16.238.187)
     ```
 
   - The **`last`** command displays the record of all logged-in users along with the date and time when the system was rebooted.

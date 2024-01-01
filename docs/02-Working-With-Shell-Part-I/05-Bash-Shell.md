@@ -53,19 +53,19 @@ $ chsh
  
  To set an environment variable with in the shell. The value is not carry forward to any other process.
  ```
- $ OFFICE=salman
+ $ OFFICE=bob
  ```
  
  To set an environment variable we can use the **`export`** command. To make the value carry forward to any other process. 
  ```
- $ export OFFICE=salman
+ $ export OFFICE=bob
  ```
  
  To persistently set an environment variable over subsequent login or a reboot add them to the **`~/.profile`** or **`~/.pam_environment`** in the users home directory.
  
  ```
- $ echo "export OFFICE=salman" >> ~/.profile (or)
- $ echo "export OFFICE=salman" >> ~/.pam_environment
+ $ echo "export OFFICE=bob" >> ~/.profile (or)
+ $ echo "export OFFICE=bob" >> ~/.pam_environment
  ```
  
  To check the value of a environment variable called **`LOGNAME`**
