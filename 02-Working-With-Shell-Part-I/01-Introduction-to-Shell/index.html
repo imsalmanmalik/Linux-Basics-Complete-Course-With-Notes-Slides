@@ -1,0 +1,397 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="A linux docs site">
+      
+      
+        <meta name="author" content="Salman Malik">
+      
+      
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.3">
+    
+    
+      
+        <title>Working with the shell - I - Embark on your Linux mastery journey, one command at a time!</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.50c56a3b.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#working-with-the-shell-i" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Embark on your Linux mastery journey, one command at a time!" class="md-header__button md-logo" aria-label="Embark on your Linux mastery journey, one command at a time!" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Embark on your Linux mastery journey, one command at a time!
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Working with the shell - I
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/imsalmanmalik/Linux-Basics-Complete-Course-With-Notes-Slides" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Linux-Basics-Complete-Course-With-Notes-Slides
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Embark on your Linux mastery journey, one command at a time!" class="md-nav__button md-logo" aria-label="Embark on your Linux mastery journey, one command at a time!" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Embark on your Linux mastery journey, one command at a time!
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/imsalmanmalik/Linux-Basics-Complete-Course-With-Notes-Slides" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Linux-Basics-Complete-Course-With-Notes-Slides
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../index.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#linux-shell" class="md-nav__link">
+    <span class="md-ellipsis">
+      Linux shell
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-home-directory" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Home Directory
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#command-prompt" class="md-nav__link">
+    <span class="md-ellipsis">
+      Command Prompt
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#command-and-arguments" class="md-nav__link">
+    <span class="md-ellipsis">
+      Command and Arguments
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#command-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      Command Types
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="working-with-the-shell-i">Working with the shell - I</h1>
+<p>In this section, we will take a look at linux shell in detail. 
+- We will learn how to use linux commands and understand how to work with files and directories. 
+- We will also see different ways to get help with linux commands. 
+- Finally, we will learn about different types of shells used in Linux (particulary focusing on the bash shell)</p>
+<h4 id="linux-shell">Linux shell</h4>
+<p><img alt="Shell" src="../../images/Shell.PNG" /></p>
+<ul>
+<li>This command line interface (CLI) will enable you to effectively work on linux laptop/server/virtual machine.</li>
+<li>While the graphical version may see more appealing to the users but can be limited in case of functionality. These is where the Linux command line commonly known as <strong><code>Linux Shell</code></strong> shines.</li>
+</ul>
+<p>#### What is a shell?</p>
+<ul>
+<li>Linux shell is a program that allows text based interaction between the user and the operating system, this interaction is carried out by typing commands into the interface and receving the response in the same way.</li>
+<li>The Linux shell is a powerful tool with which you can navigate between different locations within the system, however when you login to the shell the very first directory you were take into is your home directory.</li>
+</ul>
+<h4 id="the-home-directory">The Home Directory</h4>
+<p><img alt="The-Home-Directory" src="../../images/The_Home_Directory.JPG" /></p>
+<ul>
+<li>A user <strong><code>michael</code></strong> home directory created under <strong><code>/home/michael</code></strong>, where <strong><code>/home</code></strong> is a system created home directory that contains the home directories for almost all users in the linux system. </li>
+<li>The name of the home directory is by default identical to the name of the user, hence <strong><code>michael's</code></strong> home directory is <strong><code>/home/michael</code></strong>.</li>
+<li>Remember the home directory is unique for each user. Another user called <strong><code>allen</code></strong> will have a different home directory which by default created under <strong><code>/home/allen</code></strong>.</li>
+</ul>
+<p>##### Why do we need a home directoy?
+  - The home directory allows users to store their personal data in the form of files and directories
+  - Each user in the system gets their own unique home directory with complete access to it (to be able to save, retreive , delete data).
+  - Think of it as a dedicated locker assign to you in which you can store or retreive items.
+  - Other users can't access your files and folders with in your home directory (only you can).</p>
+<p><strong>Note</strong> : The representation of the home directory is represented as by the <code>~ (tilde symbol).</code></p>
+<h4 id="command-prompt">Command Prompt</h4>
+<ul>
+<li>You can configure the command prompt to show whatever you want, such as the <strong><code>hostname</code></strong> , <strong><code>date</code></strong> or <strong><code>time</code></strong>. </li>
+<li>It is currently configured to show the current working directory. The <strong><code>~</code> symbol</strong>  here represents the home directory</li>
+</ul>
+<h4 id="command-and-arguments">Command and Arguments</h4>
+<ul>
+<li>To interact with the linux system using the shell, a user has to type in commands</li>
+<li>When a command is run it executes a program to achieve a specific task.</li>
+<li><strong><code>For example</code></strong>: The <strong><code>echo</code></strong> command is used to print a line of text on the screen.
+  <code>$ echo</code></li>
+<li>An argument acts as an input to command</li>
+<li><strong><code>For example</code></strong>: To print a <strong><code>hello</code></strong> message type <strong><code>echo hello</code></strong> command.
+  <code>$ echo hello</code></li>
+<li>There are several commands that can work without an argument too.</li>
+<li><strong><code>For example</code></strong>: Type in the command called <strong><code>uptime</code></strong>, this is used to print information about how long a system has been running for since the last reboot along with the other information (This command doesn't need an argument)
+  <code>$ uptime</code></li>
+<li>A command can also have options that modify its behaviour in some predetermine way. The option also sometime referred to as a switch or a flag </li>
+<li><strong><code>For example</code></strong>: To print a same word <code>hello</code> but without a trailing line, use <strong><code>echo</code></strong> command with <strong><code>-n</code></strong> flag.
+  <code>$ echo -n hello</code></li>
+</ul>
+<p><img alt="Command-and-Arguments" src="../../images/Command-and-Arguments.PNG" /></p>
+<h4 id="command-types">Command Types</h4>
+<p>Command types in linux can be generally categorized in two types
+ 1. Internal or Built-in Commands 
+    - Internal commands are part of the shell itself. It come bundled with it, there are in total about 30 such commands
+    - <strong><code>For example</code></strong>: echo, cd, pwd, set e.t.c.
+ 1. External Commands
+    - External commands on the other hand are binary programs or scripts which are usually located in distinct files in the system. They either come with pre-install with the distribution package manager or can be created or installed by the user
+    - <strong><code>For Example</code></strong>: mv, date, uptime, cp e.t.c.</p>
+<p>To determine a command is internal or external, use <strong><code>type</code></strong> command</p>
+<p><img alt="Command-Types" src="../../images/Command-Types.PNG" /></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7c377c4.min.js"></script>
+      
+    
+  </body>
+</html>

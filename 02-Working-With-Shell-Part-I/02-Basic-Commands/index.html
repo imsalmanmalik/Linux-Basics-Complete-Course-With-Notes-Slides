@@ -1,0 +1,438 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="A linux docs site">
+      
+      
+        <meta name="author" content="Salman Malik">
+      
+      
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.3">
+    
+    
+      
+        <title>Basic Linux Commands - Embark on your Linux mastery journey, one command at a time!</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.50c56a3b.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#basic-linux-commands" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Embark on your Linux mastery journey, one command at a time!" class="md-header__button md-logo" aria-label="Embark on your Linux mastery journey, one command at a time!" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Embark on your Linux mastery journey, one command at a time!
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Basic Linux Commands
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/imsalmanmalik/Linux-Basics-Complete-Course-With-Notes-Slides" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Linux-Basics-Complete-Course-With-Notes-Slides
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Embark on your Linux mastery journey, one command at a time!" class="md-nav__button md-logo" aria-label="Embark on your Linux mastery journey, one command at a time!" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Embark on your Linux mastery journey, one command at a time!
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/imsalmanmalik/Linux-Basics-Complete-Course-With-Notes-Slides" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Linux-Basics-Complete-Course-With-Notes-Slides
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../index.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#our-goal-is-to-create-a-directory-structure-the-top-most-directory-which-is-homemichael-which-is-already-created-as-it-as-a-home-directory-but-everything-else-underneath-has-to-be-created" class="md-nav__link">
+    <span class="md-ellipsis">
+      Our goal is to create a directory structure, the top most directory which is /home/michael which is already created as it as a home directory but everything else underneath has to be created.
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="basic-linux-commands">Basic Linux Commands</h1>
+<p>In this section, we will take a look at basic linux commands 
+- Specifically related to navigation and creating new files and directories.
+- We will do this by completing a simple task using a linux shell.</p>
+<h4 id="our-goal-is-to-create-a-directory-structure-the-top-most-directory-which-is-homemichael-which-is-already-created-as-it-as-a-home-directory-but-everything-else-underneath-has-to-be-created">Our goal is to create a directory structure, the top most directory which is <strong><code>/home/michael</code></strong> which is already created as it as a home directory but everything else underneath has to be created.</h4>
+<p><img alt="mkdir_cd_working_with_shell_I" src="../../images/mkdir_cd_working_with_shell_I.PNG" /></p>
+<p>To print the present working directory. Run <strong><code>pwd</code></strong> command</p>
+<pre><code>$ pwd
+</code></pre>
+<p>To see the contents of the directory. Run <strong><code>ls</code></strong> command</p>
+<pre><code>$ ls 
+````
+
+To make (or) create a directory. Run **`mkdir`** command
+</code></pre>
+<p>$ mkdir Asia</p>
+<pre><code>
+To make (or) create multiple directories. Run **`mkdir`** command followed by **`&lt;directory_name1&gt; &lt;directory_name2&gt; .. &lt;directory_nameN&gt;`**
+</code></pre>
+<p>$ mkdir Europe Africa America</p>
+<pre><code>
+To change a directory from the current directory. Run **`cd &lt;directory_name&gt;`**
+</code></pre>
+<p>$ cd Asia</p>
+<pre><code>
+To recursively created directories. Run **`mkdir -p &lt;directory_name1&gt;/&lt;sub_directory_of_name1&gt;`**
+</code></pre>
+<p>$ mkdir -p India/Mumbai</p>
+<pre><code>
+To go back to one directory up. Run **`cd ..`**
+</code></pre>
+<p>$ cd ..</p>
+<pre><code>
+To go back directly to a home directory of the current user from any location in the system. Run **`cd`**
+</code></pre>
+<p>$ cd</p>
+<pre><code>
+#### Lets now look at absolute path and relative path
+
+
+
+![Absolute_and_relative_path_working_with_shell_I](../../images/Absolute_and_relative_path_working_with_shell_I.PNG)
+
+**Difference Between Absolute and Relative Path**
+
+- **Absolute Path** : An absolute path is defined as specifying the location of a file or directory from the root directory(/).
+- **Relative Path** : Relative path is defined as the path related to the present working directly(pwd).
+
+To change to a directory with absolute path. Run **`cd &lt;directory_path&gt;`**
+</code></pre>
+<p>$ cd /home/michael</p>
+<pre><code>
+To Change to a directory with relative path. Run **`cd &lt;directoryName&gt;`**
+</code></pre>
+<p>$ cd Asia</p>
+<pre><code>
+#### Lets now take a look at alternatives to the **`cd`** command
+
+![pushd_popd](../../images/pushd_popd.PNG)
+
+Alternative to the **`cd`** is the **`pushd\popd`** command. To change directory using pushd, run **`pushd &lt;directory_name&gt;`**
+</code></pre>
+<p>$ pushd /etc</p>
+<pre><code>
+You can change to subdirecties under /etc as many times as you wish
+</code></pre>
+<p>$ pushd /var
+$ pushd /tmp
+$ pwd
+/etc/var/tmp</p>
+<pre><code>
+To return back to origin directory(say your home directory), use the **`popd`** command
+</code></pre>
+<p>$ popd</p>
+<pre><code>
+#### Now lets move on to look some more basic commands in linux. To learn these commands we will make use of the same directory structure as before, however now there are some new files and directories added as shown in the diagram. The goal of this task is to make sure the directory structure looks like the below diagram .
+
+![before_after_commands](../../images/before_after_commands.PNG)
+
+To move file or directory. Run **`mv &lt;source&gt; &lt;destination&gt;`** command
+</code></pre>
+<p>$ mv /home/michael/Europe/Morocco /home/michael/Africa/ (Absolute path)
+$ mv Europe/Morocco Africa/ (Relative Path)</p>
+<pre><code>
+To rename a directory. Run **`mv &lt;oldname&gt; &lt;newname&gt;`** command
+</code></pre>
+<p>$ mv Asia/India/Munbai Asia/India/Mumbai</p>
+<pre><code>
+To copy a file to a directory. Run **`cp &lt;filename&gt; &lt;destination_directorypath&gt;`** command
+</code></pre>
+<p>$ cp Asia/India/Mumbai/City.txt Africa/Egypt/Cairo</p>
+<pre><code>
+To delete a file from a directory. Run **`rm /path/&lt;filename&gt;`** command
+</code></pre>
+<p>$ rm Europe/UK/London/Tottenham.txt</p>
+<pre><code>
+To copy a directory recursively. Run **`cp -r &lt;sourcepath&gt; &lt;destinationPath&gt;`** command
+</code></pre>
+<p>$ cp -r Europe/UK Europe/UnitedKingdom</p>
+<pre><code>
+To print the content of a file. Run **`cat /path/to/&lt;filename&gt;`** command
+</code></pre>
+<p>$ cat Asia/India/Mumbai/City.txt</p>
+<pre><code>
+To add a content to a file with cat(redirect) . Run **`cat &gt; /path/to/&lt;filename&gt;`** command
+</code></pre>
+<p>$ cat &gt; Africa/Egypt/Cairo/City.txt
+  Cairo
+  <code>Type Ctrl + d from keyboard</code></p>
+<pre><code>
+To create an empty file. Run **`touch /path/to/filename`** command
+</code></pre>
+<p>$ touch /home/michael/Asia/China/Country.txt</p>
+<pre><code>
+To see the content of a file in a scrollable manner. Run **`more /path/to/filename`** command &lt;-- not recommended for large files
+</code></pre>
+<p>$ more new_file.txt</p>
+<pre><code>
+To see the content of a file and navigate throught the file. Run **`less /path/to/filename`** command
+</code></pre>
+<p>$ less new_file.txt</p>
+<pre><code>
+To get the long list of files and directories. Run **`ls -l`** command
+</code></pre>
+<p>$ ls -l</p>
+<pre><code>
+To list all files including the hidden. Run **`ls -la`** command
+</code></pre>
+<p>$ ls -a</p>
+<pre><code>
+To list all the files in the order they were modified. Run **`ls -lt`** command
+</code></pre>
+<p>$ ls -lt</p>
+<pre><code>
+To list all the files form oldest to newest. Run **`ls -ltr`** command
+</code></pre>
+<p>$ ls -ltr
+```</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7c377c4.min.js"></script>
+      
+    
+  </body>
+</html>

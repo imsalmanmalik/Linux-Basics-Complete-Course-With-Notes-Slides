@@ -1,0 +1,392 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="A linux docs site">
+      
+      
+        <meta name="author" content="Salman Malik">
+      
+      
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.3">
+    
+    
+      
+        <title>Package Management Distribution - Embark on your Linux mastery journey, one command at a time!</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.50c56a3b.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#package-management-distribution" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Embark on your Linux mastery journey, one command at a time!" class="md-header__button md-logo" aria-label="Embark on your Linux mastery journey, one command at a time!" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Embark on your Linux mastery journey, one command at a time!
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Package Management Distribution
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/imsalmanmalik/Linux-Basics-Complete-Course-With-Notes-Slides" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Linux-Basics-Complete-Course-With-Notes-Slides
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Embark on your Linux mastery journey, one command at a time!" class="md-nav__button md-logo" aria-label="Embark on your Linux mastery journey, one command at a time!" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Embark on your Linux mastery journey, one command at a time!
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/imsalmanmalik/Linux-Basics-Complete-Course-With-Notes-Slides" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Linux-Basics-Complete-Course-With-Notes-Slides
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../index.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction-to-package-managers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introduction to Package Managers
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Introduction to Package Managers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#now-lets-compare-rhel-and-centos-operating-systems" class="md-nav__link">
+    <span class="md-ellipsis">
+      Now, Lets compare RHEL and CentOS Operating Systems.
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-a-package" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is a package?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thats-seems-to-be-a-quite-easy-process-why-dont-we-do-all-the-time-download-a-package-and-install-it-on-a-linux-servers-wondering-the-need-of-package-managers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Thats seems to be a quite easy process, why don't we do all the time? download a package and install it on a linux servers. Wondering the need of package managers?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a-package-manager-is-a-software-in-a-linux-system-that-provides-the-consistent-and-automated-process-in-installing-upgrading-configuring-and-removing-packages-from-the-operating-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      A package manager is a software in a linux system that provides the consistent and automated process in installing, upgrading, configuring and removing packages from the operating system.
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#functions-of-package-manager" class="md-nav__link">
+    <span class="md-ellipsis">
+      Functions of Package Manager
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#types-of-package-managers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Types of Package Managers
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="package-management-distribution">Package Management Distribution</h1>
+<p>In this section, we will take a look at the Linux Package Management tools used in different linux distribution
+- Will start with introduction to the package management.</p>
+<h2 id="introduction-to-package-managers">Introduction to Package Managers</h2>
+<p>For <strong><code>Debain/Ubuntu</code></strong>, it is <strong><code>apt/dpkg</code></strong> and for CentOs/Redhat, it is <strong><code>RPM</code></strong></p>
+<p><img alt="package-managers" src="../../images/package-managers.PNG" /></p>
+<p><strong>Question</strong> : What is the difference between <strong><code>CentOS</code></strong>, <strong><code>RHEL</code></strong> and <strong><code>Ubuntu</code></strong>*?
+- There are hundreds of Linux distributions in use today</p>
+<p>One of the common ways to catagorize linux distribution is by the package manager it uses.
+- For example: Distributions such as <strong><code>RHEL</code></strong>, <strong><code>Fedora</code></strong> and <strong><code>CentOS</code></strong>. are based on RPM. Hence they are known as <strong><code>RPM</code></strong> based distribution. The <strong><code>Debian</code></strong> family including <strong><code>Ubuntu</code></strong>, <strong><code>Debian</code></strong> and <strong><code>Linux Mint</code></strong> e.t.c. make use of <strong><code>Debian</code></strong> based package managers such as the <strong><code>DPKG</code></strong>. </p>
+<p><img alt="deb-rpm" src="../../images/deb-rpm.PNG" /></p>
+<h4 id="now-lets-compare-rhel-and-centos-operating-systems">Now, Lets compare <strong><code>RHEL</code></strong> and <strong><code>CentOS</code></strong> Operating Systems.</h4>
+<p><img alt="rhel-centos" src="../../images/rhel-centos.PNG" /></p>
+<h4 id="what-is-a-package">What is a package?</h4>
+<ul>
+<li>A package in its simplest defination is a compressed archieve that contains all the files that are required by a particular software to run.</li>
+<li>For example: Lets consider an Ubuntu System, we want to install a simple editing system such as <strong><code>gimp</code></strong> which stands for <strong><code>GNU Image Manipulation System</code></strong>. To do this, we can make use of the <strong><code>gimp.deb</code></strong> package which contains all the software binaries and files needed to for the image editor to run along with the metadata which provides the information about the software itself.</li>
+</ul>
+<p><img alt="package" src="../../images/package.PNG" /></p>
+<h4 id="thats-seems-to-be-a-quite-easy-process-why-dont-we-do-all-the-time-download-a-package-and-install-it-on-a-linux-servers-wondering-the-need-of-package-managers">Thats seems to be a quite easy process, why don't we do all the time? download a package and install it on a linux servers. Wondering the need of package managers?</h4>
+<ul>
+<li>There are hundreds of linux distributions are there, these distributions runs different sets of tools and libraries, software and possibly even different linux kernels as a result of this a linux program may not run the same way from one system to another. To fix this problem packages include a manifest of dependencies or list of programs in versions that must be satified for the package software to run correctly on a given computer.</li>
+<li>Take a look at the errors in the installation while attempting to install <strong><code>gimp.deb</code></strong> on this ubuntu 18.04 system, the dependencies failed as a result the installations failed. Bare in mind that each of these dependent packages may have dependencies of their own which makes package installation management a very tedious process. This is where a <strong><code>Package Manager</code></strong> comes into save the day.</li>
+</ul>
+<p><img alt="package-errors" src="../../images/package-errors.PNG" /></p>
+<h4 id="a-package-manager-is-a-software-in-a-linux-system-that-provides-the-consistent-and-automated-process-in-installing-upgrading-configuring-and-removing-packages-from-the-operating-system">A package manager is a software in a linux system that provides the consistent and automated process in installing, upgrading, configuring and removing packages from the operating system.</h4>
+<p><img alt="pkg-mgr" src="../../images/pkg-mgr.PNG" /></p>
+<h2 id="functions-of-package-manager">Functions of Package Manager</h2>
+<p><img alt="functions-of-pkg" src="../../images/functions-of-pkg.PNG" /></p>
+<h2 id="types-of-package-managers">Types of Package Managers</h2>
+<p>A Linux distribution supports different types of package managers, some of the common ones are below</p>
+<p><img alt="types-of-pkg" src="../../images/types-of-pkg.PNG" /></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7c377c4.min.js"></script>
+      
+    
+  </body>
+</html>
