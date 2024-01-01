@@ -3,7 +3,7 @@ site_description: 'A linux docs site'
 site_author: 'Salman Malik'
 docs_dir: docs/
 repo_name: 'Linux-Basics-Complete-Course-With-Notes-Slides'
-repo_url: 'https://github.com/imbobmalik/Linux-Basics-Complete-Course-With-Notes-Slides'
+repo_url: 'https://github.com/imsalmanmalik/Linux-Basics-Complete-Course-With-Notes-Slides'
 nav:
     - Home: index.md
 theme:
